@@ -1,0 +1,6 @@
+*.pptx
+.DS_Store
+upload.sh
+/Ejercicios/*.docx
+/Recursos
+UD03.pdf

@@ -1,0 +1,66 @@
+1.- Carreras de Camellos
+
+Ya sabemos como va, si no deberemos repasar la tarea anterior. Ahora toca resolverlo en red mediante Cliente-Servidor y sockets orientados a la conexión. Eso sí, vamos a hacerlo con interfaz gráfica (si queréis).
+
+El programa servidor preguntará al usuario cuantos jugadores serán; cuando todos ellos se hayan conectado comienza el juego. El servidor deberá indicar el orden de tirada a cada cliente.
+
+Cada cliente realizará la tirada y le mandará el resultado al servidor.
+
+El servidor procesa el resultado de dicho cliente.
+
+Los clientes reciben información del servidor de cómo va la competición y van viendo los progresos de su camello y el de los otros jugadores, indicando quien gana y el resultado de la carrera en una ventana especial del cliente.
+
+2.- Blackjack
+
+Veo la carta y quiero otra... ¡Vaya me quedó sin blanca!
+
+Nuestro servidor permitirá conectarse a dos jugadores que jugar�n al BlackJack. Cada jugador, inicialmente realizará una apuesta. Posteriormente, por turnos, puede pedir cartas al servidor, con la condición de que una sola de las que tiene permanezca tapada, y por lo tanto no es visible para el oteo jugador.
+
+Si alguno se pasa ganará el otro y ganará el dinero apostado que se le retará al otro jugador; si ambos se plantan el servidor determinará quien ha ganado dependiendo el que más cercano se quede sin pasarse. Cuando la partida haya terminado se indicará la puntuación de ambos a los dos jugadores y quien ha ganado o si se ha quedado empate. Después el servidor esperará a otros dos jugadores.
+[Opcional] Una vez se haya realizado el ejercicio, generaliza la solución para un número indeterminado de partidas, es decir, se va jugado hasta que un jugador se arruine.
+
+No olvidéis que con interfaz gráfica sencilla y botones todo es bonito (si queréis).
+
+
+3.- Mi primer Troyano
+
+He visto un brillo en vuestros, y una sonrisa en vuestra cara, el lado oscuro os llama.
+
+Vamos a diseñar un troyano muy sencillo "solo" con fines didácticos. Utilizaremos una de las muchas prácticas que hacemos y se la damos a nuestros amigos para vacilar. Pero meteremos este código oculto:
+
+Cuando nuestro código cliente ejecute el programa se conectará con nuestro equipo (de forma silenciosa sin que el usuario de nuestro procesador se entere de nada). Nuestro equipo pirata registrará a ese usuario (IP, nombre de usuario, carpeta de trabajo, nombre de equipo "todo lo que pillemos") y mantendrá el contacto con ese usuario (por debajo, shh, es secreto). Si algún otro utiliza nuestro procesador en otra máquina, repetimos la operación.
+
+En un momento dado podemos "atacar" a todas las máquinas "infectadas". Nuestro ataque consiste mostrarle una ventana emergente en un JTextArea de nuestro usuario toda la información que hemos sacado de su sistema con la frase final de Yoda: ¡¡Grande!! Gran guerrero, dices. mmmm. La guerra no hacer grande a nadie.
+
+Nota para obtener información del sistema:
+String sSistemaOperativo = System.getProperty("os.name");
+System.out.println(sSistemaOperativo);
+InetAddress localHost = InetAddress.getLocalHost();
+System.out.println(localHost.getHostName());
+System.out.println(localHost.getHostAddress());
+String usuario = System.getProperty("user.name"); 
+System.out.println(usuario);
+String arquitecturaSO = System.getProperty("os.arch"); 
+System.out.println(arquitecturaSO);
+String versionSO = System.getProperty("os.version");
+System.out.println(versionSO);
+String currentDIR = System.getProperty("user.dir");
+System.out.println(currentDIR);
+String userHome = System.getProperty("user.home");
+System.out.println(userHome);
+
+Me da a mi que a más de uno ha descubierto un motivo para gustarle este módulo.
+
+4.- Chat
+Realiza un chat usando el patrón observer
+
+5.- Realiza un programa que nos sirva para hacer un CRUD de raquetas 
+
+5.- Jamones
+Repite el problema de los jamones usando un monitor en el servidor. 
+Deberán conectarse como cliente las granjas y un mensajero y operar sobre el monitor en el servidor.
+
+6.- Ktor sockets
+Repite los problemas usando Ktor y corrutinas
+
+
